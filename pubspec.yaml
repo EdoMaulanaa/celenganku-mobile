@@ -1,5 +1,5 @@
 name: celenganku
-description: "A new Flutter project."
+description: "Aplikasi tabungan pribadi berbasis Flutter yang ringan, privat, dan mudah digunakan."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -34,7 +34,28 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
-  get: ^4.7.2
+  
+  # Supabase untuk autentikasi dan database
+  supabase_flutter: ^2.3.2
+  
+  # State management
+  flutter_riverpod: ^2.4.10
+  riverpod_annotation: ^2.3.4
+  
+  # Local storage
+  shared_preferences: ^2.2.2
+  
+  # Environment variables
+  flutter_dotenv: ^5.1.0
+  
+  # Utilitas
+  intl: ^0.19.0
+  uuid: ^4.3.3
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.3.13
+  
+  # UI
+  google_fonts: ^6.1.0
 
 dev_dependencies:
   flutter_test:
@@ -46,6 +67,12 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
+  
+  # Generators
+  build_runner: ^2.4.8
+  riverpod_generator: ^2.3.10
+  custom_lint: ^0.6.2
+  riverpod_lint: ^2.3.7
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -59,7 +86,9 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
+  assets:
+    - assets/images/
+    - .env
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
